@@ -48,4 +48,10 @@ public class FakeUsuarioRepository : IUsuarioRepository
     {
         return Task.CompletedTask;
     }
+
+    public Task ExcluirUsuario(Usuario usuario)
+    {
+        _usuarios.Remove(usuario);
+        return Task.CompletedTask;
+    }
 }

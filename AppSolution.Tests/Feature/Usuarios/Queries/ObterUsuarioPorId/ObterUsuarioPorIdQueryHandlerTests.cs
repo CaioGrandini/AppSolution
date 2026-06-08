@@ -43,8 +43,7 @@ namespace AppSolution.Tests.Feature.Usuarios.Queries.ObterUsuarioPorId
 
             // Act
 
-            var resultado =
-                await handler.Handle(query);
+            var resultado = await handler.Handle(query);
 
             // Assert
 
