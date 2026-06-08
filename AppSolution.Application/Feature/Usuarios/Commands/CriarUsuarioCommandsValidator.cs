@@ -1,11 +1,10 @@
-﻿using AppSolution.Application.Feature.Usuarios.Commands;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace AppSolution.Application.Features.Usuarios.Commands.CriarUsuario;
+namespace AppSolution.Application.Feature.Usuarios.Commands.CriarUsuario;
 
-public class CriarUsuarioCommandValidator : AbstractValidator<CriarUsuarioCommand>
+public class CriarUsuarioCommandsValidator : AbstractValidator<CriarUsuarioCommands>
 {
-    public CriarUsuarioCommandValidator()
+    public CriarUsuarioCommandsValidator()
     {
         RuleFor(x => x.Nome)
             .NotEmpty()

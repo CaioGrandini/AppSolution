@@ -43,4 +43,9 @@ public class FakeUsuarioRepository : IUsuarioRepository
 
         return Task.FromResult(resultado);
     }
+
+    public Task AtualizarAsync(Usuario usuario)
+    {
+        return Task.CompletedTask;
+    }
 }

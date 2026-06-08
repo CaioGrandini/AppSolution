@@ -10,7 +10,7 @@ using AppSolution.Domain.ValueObjects;
 using FluentAssertions;
 using Moq;
 
-namespace AppSolution.Tests.Features.Usuarios.Queries.ObterUsuarioPorId
+namespace AppSolution.Tests.Feature.Usuarios.Queries.ObterUsuarioPorId
 {
     public class ObterUsuarioPorIdQueryHandlerTests
     {

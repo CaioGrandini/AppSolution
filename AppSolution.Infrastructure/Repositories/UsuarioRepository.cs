@@ -54,5 +54,19 @@ namespace AppSolution.Infrastructure.Repositories
                 .Take(pageSize)
                 .ToListAsync(cancellationToken);
         }
+
+        public async Task AtualizarAsync(Usuario usuario)
+        {
+            _context.Usuarios.Update(usuario);
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task ExcluirUsuario(Usuario usuario)
+        {
+            _context.Usuarios.Remove(usuario);
+
+            await _context.SaveChangesAsync();
+        }
     }
 }

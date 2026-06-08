@@ -1,24 +1,23 @@
-﻿using AppSolution.Application.Feature.Usuarios.Commands;
-using AppSolution.Domain.Entities;
+﻿using AppSolution.Domain.Entities;
 using AppSolution.Domain.Exceptions;
 using AppSolution.Domain.Interfaces;
 using AppSolution.Domain.ValueObjects;
 
-namespace AppSolution.Application.Features.Usuarios.Commands.CriarUsuario;
+namespace AppSolution.Application.Feature.Usuarios.Commands.CriarUsuario;
 
-public class CriarUsuarioCommandHandler
+public class CriarUsuarioCommandsHandler
 {
     private readonly IUsuarioRepository _usuarioRepository;
 
-    public CriarUsuarioCommandHandler(
+    public CriarUsuarioCommandsHandler(
         IUsuarioRepository usuarioRepository)
     {
         _usuarioRepository = usuarioRepository;
     }
 
-    public async Task<Guid> Handle(CriarUsuarioCommand command)
+    public async Task<Guid> Handle(CriarUsuarioCommands command)
     {
-        var validator = new CriarUsuarioCommandValidator();
+        var validator = new CriarUsuarioCommandsValidator();
 
         var validationResult = await validator.ValidateAsync(command);
 

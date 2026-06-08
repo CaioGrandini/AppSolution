@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppSolution.Tests.Features.Usuarios.Queries.ObterUsuarios
+namespace AppSolution.Tests.Feature.Usuarios.Queries.ObterUsuarios
 {
     public class ObterUsuariosQueryHandlerTests
     {

@@ -15,5 +15,7 @@ namespace AppSolution.Domain.Interfaces
         Task AdicionarAsync(Usuario usuario);
         Task<int> ContarAsync(CancellationToken cancellationToken = default);
         Task<List<Usuario>> ObterPaginadoAsync(int page, int pageSize, CancellationToken cancellationToken = default);
+        Task AtualizarAsync(Usuario usuario);
+        Task ExcluirUsuario(Usuario usuario);
     }
 }

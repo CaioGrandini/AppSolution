@@ -1,11 +1,12 @@
 ﻿
+
 using AppSolution.Application.Feature.Usuarios.Commands;
-using AppSolution.Application.Features.Usuarios.Commands.CriarUsuario;
+using AppSolution.Application.Feature.Usuarios.Commands.CriarUsuario;
 using AppSolution.Domain.Exceptions;
 using AppSolution.UnitTests.Fakes;
 using FluentAssertions;
 
-namespace AppSolution.UnitTests.Features.Usuarios.CriarUsuario;
+namespace AppSolution.Tests.Feature.Usuarios.Command;
 
 public class CriarUsuarioCommandHandlerTests
 {
@@ -15,9 +16,9 @@ public class CriarUsuarioCommandHandlerTests
         // Arrange
         var repository = new FakeUsuarioRepository();
 
-        var handler = new CriarUsuarioCommandHandler(repository);
+        var handler = new CriarUsuarioCommandsHandler(repository);
 
-        var command = new CriarUsuarioCommand(
+        var command = new CriarUsuarioCommands(
             "Caio",
             "caio@email.com");
 
@@ -42,9 +43,9 @@ public class CriarUsuarioCommandHandlerTests
         // Arrange
         var repository = new FakeUsuarioRepository();
 
-        var handler = new CriarUsuarioCommandHandler(repository);
+        var handler = new CriarUsuarioCommandsHandler(repository);
 
-        var command = new CriarUsuarioCommand(
+        var command = new CriarUsuarioCommands(
             "Caio",
             "email-invalido");
 

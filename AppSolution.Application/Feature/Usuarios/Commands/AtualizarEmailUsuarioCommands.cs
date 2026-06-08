@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AppSolution.Application.Feature.Usuarios.Commands
 {
-    public record CriarUsuarioCommand
+    public record AtualizarEmailUsuarioCommands
     (
-        string Nome,
+        Guid Id,
         string Email
     );
 }
